@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "jsn",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -24,7 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/jsn_logo.png",
+              "src/jsn_logo.svg",
               "src/assets"
             ],
             "styles": [
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jsnelson-pro"
+    }
+  },
+  "defaultProject": "jsnelson-pro",
+  "cli": {
+    "analytics": "916100d7-f8a3-489c-8685-0fd63b4643d6"
+  }
 }

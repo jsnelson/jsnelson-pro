@@ -1,0 +1,33 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/about">About</a>
+      <a mat-list-item routerLink="/contact">Contact</a>
+      <a mat-list-item routerLink="/links">Links</a>
+    </mat-nav-list>
+    <span id="siteseal">
+      <script async type="text/javascript" 
+              src="https://seal.starfieldtech.com/getSeal?sealID=E2y8GJ6AkL6LgtyWSlrdebohSA8fkKcYpihdIvYt7gsWyKBVcdehyHWtbftQ"></script>
+    </span>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="h1">John S Nelson</span>
+      <span class="spacer"></span>
+      <img src="assets/jsn_logo.svg" height="48" width="48">
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

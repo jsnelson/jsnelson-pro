@@ -1,0 +1,15 @@
+<mat-tab-group>
+    <mat-tab label="Bio">
+      <ng-template matTabContent>
+        <article>
+            <h1>The Life of John Nelson (Thus Far)</h1>
+            <p *ngFor="let bioPart of biography">{{ bioPart }}</p>
+        </article>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Resumé">
+        <ng-template matTabContent>
+            <a mat-raised-button color="accent" download="john_nelson_resume.pdf" target="_blank" href="/assets/john_nelson_resume.pdf"><mat-icon>file_download</mat-icon>PDF</a>
+        </ng-template>
+    </mat-tab>
+  </mat-tab-group>
