@@ -16,6 +16,11 @@
   z-index: 1;
 }
 
+#logo {
+  position: relative;
+  bottom: -5px;
+}
+
 .spacer {
   /* This fills the remaining space, by using flexbox. 
      Every toolbar row uses a flexbox row layout. */
